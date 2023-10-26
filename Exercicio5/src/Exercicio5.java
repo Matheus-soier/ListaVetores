@@ -4,7 +4,7 @@ public class Exercicio5 {
         Scanner sc = new Scanner(System.in);
         int[] valores = new int[10];
         int[] valoresPar = new int[10];
-        int[] valoresImpar = new int[10];
+        int[] valoresModificados = new int[10];
         int verificador;
         int i;
 
@@ -13,18 +13,17 @@ public class Exercicio5 {
             valores[i] = sc.nextInt();
         }
         for(i = 0; i < 10; i++) {
-            verificador = valores[i] / 2;
+            verificador = valores[i] % 2;
             if(verificador == 0) {
-                valoresPar[i] = valores[i] * 10;
+                valoresModificados[i] = (valores[i] * 10);
             } else {
-                valoresImpar[i] = valores[i] + 5;
+                valoresModificados[i] = (valores[i] + 5);
             }
         }
 
-        for(i = 0; i < 10; i++) {
-            System.out.println("Valores pares: " + valoresPar[i]);
-            System.out.println("Valores impares: " + valoresImpar[i]);
-        }
+         for(i = 0; i < 10; i++) {
+            System.out.println("Valores modificados: " + valoresModificados[i]);
+         }
         sc.next();    
     }
     
